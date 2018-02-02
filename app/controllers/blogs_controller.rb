@@ -11,4 +11,9 @@ class BlogsController < ApplicationController
   def show
     @blog = Blog.find(params[:id])
   end
+
+  def update
+    Blog.find(params[:id]).update title: params[:title] , content: params[:content]
+    redirect_to "/blogs"
+  end
 end
