@@ -5,6 +5,6 @@ class BlogsController < ApplicationController
 
   def create
     Blog.create title: params[:title] , content: params[:content]
-    redirect_to "blogs"
+    redirect_to "/blogs"
   end
 end
