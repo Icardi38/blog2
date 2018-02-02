@@ -3,3 +3,9 @@
 <% @blogs.each do |blog| %>
   <h3><%= blog.title %></h3>
   <% end %>
+
+  <%= form_tag "/blogs", method: "post" do %>
+    <input type="string" name="title" />
+    <input type="text" name="content" />
+    <input type="submit" value="Ajouter un blog" />
+  <% end %>
