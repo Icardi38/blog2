@@ -5,6 +5,4 @@ class TableBlogs < ActiveRecord::Migration[5.1]
     add_column :blogs , :content , :text
      
     end
-    
-  end
 end
