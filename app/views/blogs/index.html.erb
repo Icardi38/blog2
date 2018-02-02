@@ -1,7 +1,7 @@
 <h1>Liste des Articles</h1>
 
 <% @blogs.each do |blog| %>
-  <h3><%= blog.title %></h3>
+  <h3><a href="/blogs/<%= blog.id %>"><%= blog.title %></a></h3>
   <% end %>
 
   <%= form_tag "/blogs", method: "post" do %>

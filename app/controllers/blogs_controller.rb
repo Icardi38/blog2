@@ -7,4 +7,8 @@ class BlogsController < ApplicationController
     Blog.create title: params[:title] , content: params[:content]
     redirect_to "/blogs"
   end
+
+  def show
+    @blog = Blog.find(params[:id])
+  end
 end
