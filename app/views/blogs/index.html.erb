@@ -1,11 +1,13 @@
-<h1>Liste des Blogs</h1>
+<h1>Liste des Articles</h1>
 
 <% @blogs.each do |blog| %>
   <h3><%= blog.title %></h3>
   <% end %>
 
   <%= form_tag "/blogs", method: "post" do %>
+    <label for="title">titre</label>
     <input type="string" name="title" />
+    <label for="content">contenu de l'article</label>
     <input type="text" name="content" />
-    <input type="submit" value="Ajouter un blog" />
+    <input type="submit" value="Ajouter un article" />
   <% end %>
