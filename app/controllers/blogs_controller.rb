@@ -16,4 +16,9 @@ class BlogsController < ApplicationController
     Blog.find(params[:id]).update title: params[:title] , content: params[:content]
     redirect_to "/blogs"
   end
+
+  def destroy
+    Blog.find(params[:id]).destroy
+    redirect_to "/blogs"
+  end
 end

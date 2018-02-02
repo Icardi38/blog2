@@ -5,7 +5,11 @@
     <input type="string" name="title" value="<%= @blog.title %>" />
     <label for="content">contenu de l'article</label>
     <input type="text" name="content" value="<%= @blog.content %>"/>
-    <input type="submit" value="modifier l'article"/>
+    <input type="submit" value="modifier l'article"/>   
 <%end%>
+<%= form_tag "/blogs/#{@blog.id}" , method: "delete" do %>
+    <input type="submit" value="supprimer l'article"/>
+<%end%>
+
 <p> <a href="/blogs">Retourner aux articles </a></p>
 
